@@ -1,0 +1,62 @@
+:root {
+  /* --- Blueprint palette --- */
+  --ink-900: #071b26; /* deep blueprint navy — app background */
+  --ink-800: #0d2734; /* panel background */
+  --ink-700: #123244; /* raised surface / inputs */
+  --line-cyan: #2f6f86; /* grid + hairline strokes */
+  --line-cyan-soft: rgba(90, 168, 194, 0.18);
+  --paper: #eef3f2; /* primary text, "chalk on blueprint" */
+  --paper-dim: #9fb3bb; /* secondary text */
+  --amber: #e8a33d; /* drafting-pencil accent, active tool */
+  --amber-dim: rgba(232, 163, 61, 0.16);
+  --copper: #c97a4a; /* default wall color */
+  --danger: #d9694f;
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", monospace;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--ink-900);
+  background-image: linear-gradient(var(--line-cyan-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-cyan-soft) 1px, transparent 1px);
+  background-size: 36px 36px;
+  color: var(--paper);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--amber-dim);
+  color: var(--paper);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-cyan);
+  border-radius: 6px;
+}
